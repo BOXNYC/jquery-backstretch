@@ -5,6 +5,10 @@ Backstretch is a simple jQuery plugin that allows you to add a dynamically-resiz
 
 There are a couple of examples included with this package, or feel free to check it out live [on the project page itself](http://srobbin.com/jquery-plugins/backstretch/).
 
+## CDN
+https://cdn.rawgit.com/BOXNYC/jquery-backstretch-2/master/jquery.backstretch.js
+https://cdn.rawgit.com/BOXNYC/jquery-backstretch-2/master/jquery.backstretch.min.js
+
 ## Setup
 
 Include the jQuery library (version 1.7 or newer) and Backstretch plugin files in your webpage (preferably at the bottom of the page, before the closing BODY tag):
@@ -32,8 +36,8 @@ Include the jQuery library (version 1.7 or newer) and Backstretch plugin files i
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| `centeredX` | The ratio of the width/height of the image doesn't always jive with the width/height of the window. This parameter controls whether or not we center the image on the X axis to account for the discrepancy. | Boolean | true |
-| `centeredY` | This parameter controls whether or not we center the image on the Y axis to account for the aforementioned discrepancy. | Boolean | true |
+| `registrationX` | The ratio of the width/height of the image doesn't always jive with the width/height of the window. This parameter controls whether or not we left, center, or right align the image on the X axis to account for the discrepancy. | String | center |
+| `registrationY` | This parameter controls whether or not we top, center, or bottom align the image on the Y axis to account for the aforementioned discrepancy. | String | center |
 | `fade` | This is the speed at which the image will fade in. Integers in milliseconds are accepted, as well as standard jQuery speed strings (slow, normal, fast). | Integer or String | 0 |
 | `duration` | The amount of time in between slides, when using Backstretch as a slideshow, expressed as the number of milliseconds. | Integer | 5000 |
 
@@ -114,23 +118,3 @@ $(window).on("backstretch.after", function (e, instance, index) {
   // Do something
 });
 ```
-
-## Changelog
-
-### Version 2.0
-
-* Now accepts an array of images to create a slideshow
-* Can attach Backstretch to any block-level element, not just the body
-* Deprecated "speed" option in favor of "fade" for fadeIn timing
-* Added "duration" option, and Slideshow API
-
-### Version 1.2
-
-* You can now called backstretch twice, and it will replace the existing image.
-
-### Version 1.1
-
-* Added 'centeredX' and 'centeredY' options.
-* Removed 'hideUntilReady' option. It looks pretty bad if you don't hide the image until it's fully loaded.
-* Fixed IE img onload bug.
-* Now supports iPhone/iPad orientation changes.
