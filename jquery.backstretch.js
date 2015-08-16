@@ -195,7 +195,7 @@
                 bgWidth = bgHeight * this.$img.data('ratio');
                 switch(this.options.registrationX) {
                   case 'center' : bgCSS.left = '-' + ((bgWidth - rootWidth) / 2) + 'px'; break;
-                  case 'bottom' : bgCSS.left = '-' + (bgWidth - rootWidth) + 'px'; break;
+                  case 'right' : bgCSS.left = '-' + (bgWidth - rootWidth) + 'px'; break;
                 }
             }
 
