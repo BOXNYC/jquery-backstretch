@@ -7,6 +7,7 @@ There are a couple of examples included with this package, or feel free to check
 
 ## CDN
 https://cdn.rawgit.com/BOXNYC/jquery-backstretch-3/master/jquery.backstretch.js
+
 https://cdn.rawgit.com/BOXNYC/jquery-backstretch-3/master/jquery.backstretch.min.js
 
 ## Setup
