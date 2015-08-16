@@ -6,8 +6,8 @@ Backstretch is a simple jQuery plugin that allows you to add a dynamically-resiz
 There are a couple of examples included with this package, or feel free to check it out live [on the project page itself](http://srobbin.com/jquery-plugins/backstretch/).
 
 ## CDN
-https://cdn.rawgit.com/BOXNYC/jquery-backstretch-2/master/jquery.backstretch.js
-https://cdn.rawgit.com/BOXNYC/jquery-backstretch-2/master/jquery.backstretch.min.js
+https://cdn.rawgit.com/BOXNYC/jquery-backstretch-3/master/jquery.backstretch.js
+https://cdn.rawgit.com/BOXNYC/jquery-backstretch-3/master/jquery.backstretch.min.js
 
 ## Setup
 
