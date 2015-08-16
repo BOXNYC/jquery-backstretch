@@ -108,6 +108,12 @@
    * ========================= */
   var Backstretch = function (container, images, options) {
     this.options = $.extend({}, $.fn.backstretch.defaults, options || {});
+    
+    // Migrate depreciated options
+    if(typeof this.options.centeredX !== 'undefined')
+      this.options.registrationX = this.options.centeredX ? 'center' : 'left';
+    if(typeof this.options.centeredY !== 'undefined')
+      this.options.registrationY = this.options.centeredY ? 'center' : 'top';
 
     /* In its simplest form, we allow Backstretch to be called on an image path.
      * e.g. $.backstretch('/path/to/image.jpg')
