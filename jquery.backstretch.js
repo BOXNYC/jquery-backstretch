@@ -67,8 +67,8 @@
    * ========================= */
 
   $.fn.backstretch.defaults = {
-      centeredX: true   // Should we center the image on the X axis?
-    , centeredY: true   // Should we center the image on the Y axis?
+      registrationX: 'center'   // Should we center, right, or left align the image on the X axis?
+    , registrationY: 'center'   // Should we center, bottom, or top align the image on the Y axis?
     , duration: 5000    // Amount of time in between slides (if slideshow)
     , fade: 0           // Speed of fade transition between slides
   };
@@ -182,21 +182,20 @@
             , rootWidth = this.isBody ? this.$root.width() : this.$root.innerWidth()
             , bgWidth = rootWidth
             , rootHeight = this.isBody ? ( window.innerHeight ? window.innerHeight : this.$root.height() ) : this.$root.innerHeight()
-            , bgHeight = bgWidth / this.$img.data('ratio')
-            , bgOffset;
+            , bgHeight = bgWidth / this.$img.data('ratio');
 
             // Make adjustments based on image ratio
             if (bgHeight >= rootHeight) {
-                bgOffset = (bgHeight - rootHeight) / 2;
-                if(this.options.centeredY) {
-                  bgCSS.top = '-' + bgOffset + 'px';
+                switch(this.options.registrationY) {
+                  case 'center' : bgCSS.top = '-' + ((bgHeight - rootHeight) / 2) + 'px'; break;
+                  case 'bottom' : bgCSS.top = '-' + (bgHeight - rootHeight) + 'px'; break;
                 }
             } else {
                 bgHeight = rootHeight;
                 bgWidth = bgHeight * this.$img.data('ratio');
-                bgOffset = (bgWidth - rootWidth) / 2;
-                if(this.options.centeredX) {
-                  bgCSS.left = '-' + bgOffset + 'px';
+                switch(this.options.registrationX) {
+                  case 'center' : bgCSS.left = '-' + ((bgWidth - rootWidth) / 2) + 'px'; break;
+                  case 'bottom' : bgCSS.left = '-' + (bgWidth - rootWidth) + 'px'; break;
                 }
             }
 
